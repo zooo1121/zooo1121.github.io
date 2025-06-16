@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트스토어</title>
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+
+    <style>
+
+    *{
+        font-family: 'NanumSquareRoundBold';  
+        box-sizing: border-box; margin: 0;
+     }
+
+
+    ul{list-style: none; padding: 0;}
+     
+        #ranking{
+
+        }
+
+        .sectionTitle{
+        font-size: 2em; margin: 1em 0;
+        text-align: center;
+        }
+
+        #listBox{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+        .list{}
+        .imageBox{
+           
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .picture{
+            width:100%; display: block;
+            transition: 0.3s;
+        }
+
+        .no{
+            position: absolute; top: 0; left: 20px;
+            width:15%;
+        }
+
+        .list:hover .picture {transform: scale(1.05);}
+
+        .title{
+            margin-bottom: 10px;
+        }
+        .text{
+                font-size: 0.9em; color: rgb(0, 0, 0);
+                line-height: 1.5em;
+                margin-bottom: 10px;
+        }
+        .price{
+        font-size: 1.3em; color: crimson;
+        }
+        .price2{
+            color: dimgrey; font-size: 0.9em;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+
+        .iconBox{
+            position: absolute;
+            bottom: 10%; left:0;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .icon{
+            color: #fff;
+            font-size: 2em;
+            margin: 0 5px;
+        }
+        
+        .list:hover .iconBox{opacity: 1;}
+
+
+        @media screen and (max-width:850px) {
+             #listBox{
+            grid-template-columns: repeat(2,1fr);
+        }
+        }
+    </style>
+</head>
+<body>
+    <section id="ranking">
+
+        <h2 class="sectionTitle"> 주간 랭킹</h2>
+
+        <ul id="listBox">
+
+            <li class="list">
+                <div class="imageBox">
+                    <img src="images/옷1.jpeg" alt="옷">
+                    <img src="images/1번.png" alt=베스트1 class="no">
+                    <div class="iconBox">
+                        <i class="fa-solid fa-heart icon"></i>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                </div>
+                <h3 class="title">[당일배송] 썸머 버클 나시 세트</h3>
+                <p class="text">여름에 데일리로 입기 딱 좋은 아이템</p>
+                <h3 class="price">23,900원</h3>
+                <p class="price2">49,000원</p>
+            </li>
+
+            
+            <li class="list">
+                <div class="imageBox">
+                    <img src="images/옷2.jpeg" alt="옷">
+                    <img src="images/2번.png" alt=베스트1 class="no">
+                      <div class="iconBox">
+                        <i class="fa-solid fa-heart icon"></i>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                </div>
+                <h3 class="title">[타임 세일] 썸머 스판 바지</h3>
+                <p class="text">여름에 데일리로 입기 딱 좋은 아이템</p>
+                <h3 class="price">20,400원</h3>
+                <p class="price2">34,000원</p>
+            </li>
+
+            <li class="list">
+                <div class="imageBox">
+                    <img src="images/옷3.jpeg" alt="옷">
+                    <img src="images/3번.png" alt=베스트1 class="no">
+                      <div class="iconBox">
+                        <i class="fa-solid fa-heart icon"></i>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                </div>
+                <h3 class="title">[예슬 PICK] 슬림 블라우스</h3>
+                <p class="text">✔ 개인적으로 적극! 추천해드리는 원피스 제품 소개해드려요.</p>
+                <h3 class="price">12,400원</h3>
+                <p class="price2">28,000원</p>
+            </li>
+
+            <li class="list">
+                <div class="imageBox">
+                    <img src="images/옷4.jpeg" alt="옷">
+                    <img src="images/4번.png" alt=베스트1 class="no">
+                      <div class="iconBox">
+                        <i class="fa-solid fa-heart icon"></i>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                </div>
+                <h3 class="title">[품절임박] 심플 </h3>
+                <p class="text">여름에 데일리로 입기 딱 좋은 아이템</p>
+                <h3 class="price">10,800원</h3>
+                <p class="price2">21,000원</p>
+            </li>
+
+
+        </ul>
+
+    </section>
+</body>
+</html>
