@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필름 메이커스</title>
+<!--네이버폰트 파일-->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumHuman.css" rel="stylesheet">   
+<!--폰트어썸 파일-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--스타일 파일-->
+
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style/index.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+
+
+});
+</script>
+
+</head>
+<body>
+
+	<div class="wrapper">
+  
+
+  <!-- 네비게이션 -->
+  <div class="navbar">
+    <div class="logo-box">
+      <div class="logo"></div>
+      <img src="image/logo.png" alt="로고" class="logo">
+      <div class="logo-text">FILM MAKERS</div>
+      
+    </div>
+    <ul class="menu">
+      <li onclick="location.href='#home'">HOME</li>
+      <li onclick="location.href='#board'">BOARD</li>
+      <li onclick="location.href='#info'">INFO</li>
+      <li onclick="logout()">LOGOUT</li>
+    </ul>
+  </div>
+
+  <!-- 메인 -->
+  <div class="main-container">
+    <!-- 로그인 영역 -->
+    <div class="sidebar">
+      <div class="user-icon"><img src="image/user-solid-(1).png" alt=""></div>
+      <div id="username">GUEST</div>
+      <input type="text" id="userId" placeholder="ID" />
+      <input type="password" id="userPw" placeholder="PW" />
+      <button onclick="login()">로그인</button>
+    </div>
+
+    <!-- 콘텐츠 영역 -->
+    <div class="content">
+      <!-- HOME 영역 -->
+      <div class="main-visual" id="home">
+        <div class="poster">
+
+		</div>
+        <div class="film-circle">
+			<img src="image/film3.png" alt="#" id="film">
+		</div>
+      </div>
+
+      <!-- 배우 프로필 -->
+      <div class="profile-strip" id="info">
+        <img src="image/film.jpg" alt="#" id="film">
+	
+        <div class="profile">
+
+		</div>
+        <div class="profile">
+
+		</div>
+        <div class="profile">
+
+		</div>
+        <div class="profile">
+			
+		</div>
+      </div>
+
+      <!-- 게시판 -->
+      <div class="board-section" id="board">
+        <div class="board">
+            
+          <h3>촬영 스탭 모집 게시판</h3>
+          <p>[모집] OO영화 촬영 모집합니다.</p>
+          <p>[모집] OO단편 스탭 구합니다.</p>
+        </div>
+        <div class="board">
+          <h3>편집 스탭 모집 게시판</h3>
+          <p>[모집] OOO드라마 편집자 구함</p>
+        </div>
+        <div class="board">
+          <h3>연출 스탭 모집 게시판</h3>
+          <p>[모집] 연출 신입/경력 우대</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div class="footer">
+    <h5>FILM MAKERS © 2025. All rights reserved.</h5>
+  </div>
+</div>
+ 
+</body>
+
+</html>
