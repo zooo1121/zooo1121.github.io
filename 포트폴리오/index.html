@@ -17,10 +17,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script>
-$(function(){
+ 
+ 
+         $(function(){      //페이지 열린 후 수행 내용
+ 
+             $('#home').click(function(){  //햄버거메뉴(펼침메뉴)를 클릭했을 때
+                 $(this).toggleClass('is-active');
+                 $('#menu').fadeToggle(500);    //메뉴를 보이거나 숨김
+             });            
+ 
+             //메인메뉴에 닿으면, 서브메뉴 보이기
+             $('.main').mouseenter(function(){
+                 $(this).children('.sub').stop().slideDown(300);     //해당 서브메뉴만 보이기
+             });
+ 
+             //메인메뉴에 떠나면, 전체 서브메뉴 숨기기
+             $('.main').mouseleave(function(){
+                 $('.sub').stop().slideUp(300);
+             });
+ 
+     
+ 
+ 
+         //화면 폭이 1000px 넘으면 메뉴 스타일 초기화
+         $(window).resize(function(){
+ 
+             if( $(window).width() > 1000)
+                 $('#menu').removeAttr('style');
+ 
+         });
+     });      //$(function() 끝
 
-
-});
 </script>
 
 </head>
@@ -28,7 +55,6 @@ $(function(){
 
 	<div class="wrapper">
   
-
   <!-- 네비게이션 -->
   <div class="navbar">
     <div class="logo-box">
@@ -73,16 +99,16 @@ $(function(){
         <img src="image/film.jpg" alt="#" id="film">
 	
         <div class="profile">
-
+<img src="image/Image_fx (3).jpg" alt="">
 		</div>
         <div class="profile">
-
+<img src="image/Image_fx (4).jpg" alt="">
 		</div>
         <div class="profile">
-
+<img src="image/Image_fx (5).jpg" alt="">
 		</div>
         <div class="profile">
-			
+			<img src="image/Image_fx (6).jpg" alt="">
 		</div>
       </div>
 
